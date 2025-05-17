@@ -28,7 +28,7 @@ export default function Navbar() {
                 viewBox="0 0 300 300"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 bg-emerald-500"
+                className="h-12 w-12 bg-blue-500"
               >
                 <path
                   fillRule="evenodd"
@@ -43,7 +43,7 @@ export default function Navbar() {
                   fill="rgba(255,255,255,.2)"
                 />
               </svg>
-              Brand
+              KLEER INFINI
             </a>
             {/*      <!-- Mobile trigger --> */}
             <button
@@ -87,10 +87,10 @@ export default function Navbar() {
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="javascript:void(0)"
                 >
-                  <span>Blog</span>
+                  <span>Contact</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
@@ -98,20 +98,20 @@ export default function Navbar() {
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 text-blue-500 transition-colors duration-300 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="javascript:void(0)"
                 >
-                  <span>Planning</span>
+                  <span>Historique des demandes</span>
                 </a>
               </li>
               <li role="none" className="flex items-stretch">
                 <a
                   role="menuitem"
                   aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="javascript:void(0)"
                 >
-                  <span>About me</span>
+                  <span>🔔</span>
                 </a>
               </li>
             </ul>

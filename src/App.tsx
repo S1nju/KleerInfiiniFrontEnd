@@ -8,12 +8,13 @@ import Rauth from './pages/website/auth/rauth'
 import RegisterProducteur from './pages/website/auth/registerProducteur'
 import RegisterClient from './pages/website/auth/registerClient'
 import SignupChoose from './pages/website/auth/SignupChoose'
+import MainPage from './pages/website/main pages/Client/MainPage'
 
 function App() {
 
   return (
    <Routes>
-   
+
    <Route element={
    <Logincallback></Logincallback>}>
    <Route path="login" element={
@@ -26,25 +27,25 @@ function App() {
 <Route path="producteur" element={
    <RegisterProducteur></RegisterProducteur>}></Route>
    </Route>
-      
+
    </Route>
    {/* <Route path="/" element={
      <Landing></Landing>}></Route> */}
-{/*    
+{/*
    <Route path="/auth/google/callback" element={
    <Redirect></Redirect>}></Route> */}
    <Route path="/*" element={
    <Err404></Err404>}></Route>
      <Route element={<Rauth allowedRole={[ 'client', 'prod']}></Rauth>}>
-     
+
      </Route>
    <Route element={<Rauth allowedRole={[ 'client', 'prod']}></Rauth>}>
-   
+
    </Route>
    <Route element={<Rauth allowedRole={['client']}></Rauth>}>
-   
+   <Route path="/homepage/client" element={<MainPage></MainPage>}></Route>
    </Route>
-   
+
    </Routes>
   )
 }
