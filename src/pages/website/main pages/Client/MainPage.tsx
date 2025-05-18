@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from './Comp/NavBar'
 import Produit from './Produit'
+import Footer from './Comp/Footer'
+import { Outlet } from 'react-router-dom'
 
 function MainPage() {
   return (
-    <div>
+    <>
       <Navbar></Navbar>
-
-<Produit></Produit>
-
-    </div>
+<Outlet></Outlet>
+<Footer></Footer>
+    </>
   )
 }
 

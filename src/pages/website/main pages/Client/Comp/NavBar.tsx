@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
   const [isToggleOpen, setIsToggleOpen] = useState(false)
@@ -84,25 +85,29 @@ export default function Navbar() {
               }`}
             >
               <li role="none" className="flex items-stretch">
-                <a
+                <Link
                   role="menuitem"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
+                  to="/homepage/client"
                 >
-                  <span>Contact</span>
-                </a>
+                  <span>
+                    accueil
+                  </span>
+                </Link>
               </li>
               <li role="none" className="flex items-stretch">
-                <a
+                <Link
                   role="menuitem"
                   aria-current="page"
                   aria-haspopup="false"
                   className="flex items-center gap-2 py-4 text-blue-500 transition-colors duration-300 hover:text-blue-600 focus:text-blue-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
+                  to="produits"
                 >
-                  <span>Historique des demandes</span>
-                </a>
+                  <span>
+                    les produit aimés
+                  </span>
+                </Link>
               </li>
               <li role="none" className="flex items-stretch">
                 <a

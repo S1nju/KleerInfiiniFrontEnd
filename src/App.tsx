@@ -9,6 +9,8 @@ import RegisterProducteur from './pages/website/auth/registerProducteur'
 import RegisterClient from './pages/website/auth/registerClient'
 import SignupChoose from './pages/website/auth/SignupChoose'
 import MainPage from './pages/website/main pages/Client/MainPage'
+import Produit from './pages/website/main pages/Client/Produit'
+import LikedProducts from './pages/website/main pages/Client/LikedProducts'
 
 function App() {
 
@@ -42,8 +44,13 @@ function App() {
    <Route element={<Rauth allowedRole={[ 'client', 'prod']}></Rauth>}>
 
    </Route>
-   <Route element={<Rauth allowedRole={['client']}></Rauth>}>
-   <Route path="/homepage/client" element={<MainPage></MainPage>}></Route>
+   <Route  element={<Rauth allowedRole={['client']}></Rauth>}>
+
+   <Route path="/homepage/client" element={<MainPage></MainPage>}>
+
+      <Route path="" element={<Produit></Produit>}>  </Route>
+      <Route path="produits" element={<LikedProducts></LikedProducts>}>  </Route>
+      </Route>
    </Route>
 
    </Routes>

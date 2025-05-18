@@ -1,34 +1,47 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import RatingBasicBasic from './RatingBasicBasic';
+interface Product {
+  productname:string;
+  roductdesc:string;
+  price:number;
+  image:string;
+  alt:string;
+}
 
-function ProductCard() {
+
+function ProductCard({props}:{props:Product}) {
   return (
 <>
 
  {/*<!-- Component: E-commerce card --> */}
- <div className="overflow-hidden rounded w-80 m-2 bg-white text-slate-500 shadow-md shadow-slate-200">
+ <div className="overflow-hidden rounded w-80 m-2 bg-white text-slate-500 shadow-lg ">
         {/*  <!-- Image --> */}
         <figure>
           <img
-            src="https://picsum.photos/id/493/800/600"
+            src={props.image}
             alt="card image"
             className="aspect-video w-full"
           />
         </figure>
         {/*  <!-- Body--> */}
         <div className="p-6">
-          <header className="mb-4">
+          <header className="mb-4 flex gap-2 items-center justify-between">
+            <div>
             <h3 className="text-xl font-medium text-slate-700">
               <Link to="product/1">
-              Produit 1
-
+             {props.productname}
               </Link>
 
             </h3>
-            <p className=" text-slate-400"> $8.99</p>
+            <p className=" text-slate-400">  {props.price} DA</p>
+            </div>
+            <div>
+            <RatingBasicBasic></RatingBasicBasic>
+            </div>
           </header>
           <p>
-           Description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio necessitatibus iure ducimus earum quas ipsa accusantium quidem dolor unde quod!
+          {props.roductdesc}
           </p>
         </div>
         {/*  <!-- Action base sized basic button --> */}
