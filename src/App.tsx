@@ -11,6 +11,8 @@ import SignupChoose from './pages/website/auth/SignupChoose'
 import MainPage from './pages/website/main pages/Client/MainPage'
 import Produit from './pages/website/main pages/Client/Produit'
 import LikedProducts from './pages/website/main pages/Client/LikedProducts'
+import PageProduit from './pages/website/main pages/Client/PageProduit'
+import Profile from './pages/website/main pages/Client/Profile'
 
 function App() {
 
@@ -49,7 +51,15 @@ function App() {
    <Route path="/homepage/client" element={<MainPage></MainPage>}>
 
       <Route path="" element={<Produit></Produit>}>  </Route>
-      <Route path="produits" element={<LikedProducts></LikedProducts>}>  </Route>
+      <Route path="produit/:id" element={<PageProduit></PageProduit>}>
+
+
+       </Route>
+
+       <Route path="profile" element={<Profile></Profile>}>
+
+
+      </Route>
       </Route>
    </Route>
 

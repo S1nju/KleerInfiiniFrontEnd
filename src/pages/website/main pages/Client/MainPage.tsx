@@ -1,6 +1,6 @@
-import React from 'react'
+
 import Navbar from './Comp/NavBar'
-import Produit from './Produit'
+
 import Footer from './Comp/Footer'
 import { Outlet } from 'react-router-dom'
 

@@ -3,58 +3,65 @@ import ProductCard from './Comp/ProductCard'
 import CarouselControlsInside from './Comp/CarouselControlsInside';
 import PaginationPrimaryHelperText from './Comp/Pagination';
 interface Product {
-  productname:string;
-  roductdesc:string;
-  price:number;
-  image:string;
-  alt:string;
+  productname: string
+  productdesc: string
+  price: number
+  images: string[]
+  alt: string
+  rating: number
 }
+
 const Products:Product[]=[{
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdsnvjnvjkn",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
+  rating: 3,
 
 },
 {
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdfnvjkdfnvjnfvj",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
+  rating: 3,
 
 },
 {
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdsnvfnvjkdfnvjnfvj",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
+  rating: 3,
 
 },
 {
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjn",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
-
+  rating: 3,
 },
 {
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnv",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
-
+  rating: 3,
 },
 {
+
   productname:"product1",
-  roductdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnvjknvjdfnvjkdfnvjnfvj",
+  productdesc:"loremdjknvjkdsnvjkdsnvjnvjkndfjnv",
   price:15,
-  image:'',
+  images:[],
   alt:"productphoto",
+  rating: 3,
 
 }
 
@@ -62,7 +69,7 @@ const Products:Product[]=[{
 ]
 function Produit() {
 
-const ProductsRender = Products.map((item,index)=><ProductCard key={index} props={item}></ProductCard>)
+const ProductsRender = Products.map((item,index)=><ProductCard key={index} product={item}></ProductCard>)
 
   return (
     <div >
