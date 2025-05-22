@@ -8,6 +8,11 @@ import Rauth from './pages/website/auth/rauth'
 import RegisterProducteur from './pages/website/auth/registerProducteur'
 import RegisterClient from './pages/website/auth/registerClient'
 import SignupChoose from './pages/website/auth/SignupChoose'
+import ProducteurEspace from './pages/website/main pages/Comp/Producteur/ProducteurEspace'
+import Profil from './pages/website/main pages/Comp/Producteur/Profil'
+import ListProduits from './pages/website/main pages/Comp/Producteur/ListProduits'
+import Contact from './pages/website/main pages/Comp/Producteur/Contact'
+import NavBarproducteur from './pages/website/main pages/Comp/Producteur/NavBarproducteur'
 
 function App() {
 
@@ -18,6 +23,33 @@ function App() {
    <Logincallback></Logincallback>}>
    <Route path="login" element={
    <Login></Login>}></Route>
+   
+
+ <Route path="ProducteurEspace" element={
+   <ProducteurEspace></ProducteurEspace>}></Route>
+    <Route path="Contact" element={
+   <Contact></Contact>}></Route>
+   <Route path="ListProduits" element={
+   <ListProduits></ListProduits>}></Route>
+   
+   <Route path="NavBarproducteur" element={
+   <NavBarproducteur></NavBarproducteur>}></Route>
+   
+ 
+
+   
+
+ <Route path="Profil" element={
+   <Profil></Profil>}></Route>
+
+ 
+
+   
+
+
+
+
+   
    <Route path="signup" >
 <Route path="" element={
    <SignupChoose/>}></Route>
@@ -26,8 +58,10 @@ function App() {
 <Route path="producteur" element={
    <RegisterProducteur></RegisterProducteur>}></Route>
    </Route>
+   
       
    </Route>
+   
    {/* <Route path="/" element={
      <Landing></Landing>}></Route> */}
 {/*    
@@ -38,6 +72,7 @@ function App() {
      <Route element={<Rauth allowedRole={[ 'client', 'prod']}></Rauth>}>
      
      </Route>
+
    <Route element={<Rauth allowedRole={[ 'client', 'prod']}></Rauth>}>
    
    </Route>
@@ -46,6 +81,11 @@ function App() {
    </Route>
    
    </Routes>
+
+
+
+
+
   )
 }
 
