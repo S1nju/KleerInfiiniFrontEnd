@@ -13,6 +13,12 @@ import Profil from './pages/website/main pages/Comp/Producteur/Profil'
 import ListProduits from './pages/website/main pages/Comp/Producteur/ListProduits'
 import Contact from './pages/website/main pages/Comp/Producteur/Contact'
 import NavBarproducteur from './pages/website/main pages/Comp/Producteur/NavBarproducteur'
+import Dashbord from './pages/dashboard/dashboardcomp/dashbord'
+import SlideBar from './pages/dashboard/dashboardcomp/SlideBar'
+import Navbardashbord from './pages/dashboard/dashboardcomp/Navbardashbord'
+import SuiviInteractions from './pages/dashboard/dashboardcomp/SuiviInteractions'
+import SuiviPaiements from './pages/dashboard/dashboardcomp/SuiviPaiements'
+import Statis from './pages/dashboard/dashboardcomp/Statis'
 
 function App() {
 
@@ -37,14 +43,29 @@ function App() {
    
  
 
+      
+ <Route path="Dashbord" element={
+   <Dashbord></Dashbord>}></Route>
    
-
- <Route path="Profil" element={
-   <Profil></Profil>}></Route>
-
  
-
+     
+ <Route path="SlideBar" element={
+   <SlideBar></SlideBar>}></Route>
    
+   <Route path="Navbardashbord" element={
+   <Navbardashbord></Navbardashbord>}></Route>
+    <Route path="SuiviInteractions" element={
+   <SuiviInteractions></SuiviInteractions>}></Route>
+   
+   
+    <Route path="SuiviPaiements" element={
+   <SuiviPaiements></SuiviPaiements>}></Route>
+ 
+    <Route path="Statis" element={
+   <Statis></Statis>}></Route>
+
+
+
 
 
 
